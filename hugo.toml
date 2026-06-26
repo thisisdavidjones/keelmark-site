@@ -1,0 +1,4 @@
+baseURL = 'https://keelmark.co.uk/'
+languageCode = 'en-gb'
+title = 'Keelmark'
+theme = 'ananke'
