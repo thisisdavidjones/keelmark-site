@@ -1,0 +1,53 @@
+{{ define "main" }}
+<main class="km-home" role="main">
+  <section class="km-hero" aria-labelledby="km-hero-title">
+    <div class="km-hero__content">
+      <p class="km-kicker">{{ .Params.hero_kicker }}</p>
+      <h1 id="km-hero-title">{{ .Params.hero_title }}</h1>
+      <p class="km-hero__subtitle">{{ .Params.hero_subtitle }}</p>
+      <div class="km-button-row">
+        <a class="km-button km-button--primary" href="{{ .Params.hero_primary_url | relURL }}">{{ .Params.hero_primary_label }}</a>
+        <a class="km-button km-button--secondary" href="{{ .Params.hero_secondary_url | relURL }}">{{ .Params.hero_secondary_label }}</a>
+      </div>
+    </div>
+    <div class="km-hero__panel" aria-label="Product highlight">
+      <img src="{{ "/images/dosewise-icon.svg" | relURL }}" alt="Dosewise icon" class="km-app-icon">
+      <p class="km-panel-label">Featured product</p>
+      <h2>Dosewise</h2>
+      <p>Medication reminders, dose logging, daily limits, and weekly schedules in one clear Android app.</p>
+      <a href="{{ "/products/dosewise/" | relURL }}" class="km-text-link">Explore Dosewise</a>
+    </div>
+  </section>
+
+  <section class="km-section" aria-labelledby="km-feature-heading">
+    <div class="km-section__intro">
+      <p class="km-kicker">Approach</p>
+      <h2 id="km-feature-heading">{{ .Params.feature_heading }}</h2>
+    </div>
+    <div class="km-card-grid">
+      {{ range .Params.features }}
+      <article class="km-card">
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="km-section km-section--split" aria-labelledby="km-products-heading">
+    <div>
+      <p class="km-kicker">Products</p>
+      <h2 id="km-products-heading">Android apps from Keelmark</h2>
+      <p>Focused tools for daily routines, built to be understandable, maintainable, and respectful of your time.</p>
+    </div>
+    <div class="km-product-list">
+      {{ range where .Site.RegularPages "Section" "products" }}
+      <article class="km-product-mini">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Summary | plainify }}</p>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+</main>
+{{ end }}

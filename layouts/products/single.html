@@ -1,0 +1,69 @@
+{{ define "main" }}
+<main class="km-page km-product-page" role="main">
+  <section class="km-product-hero">
+    <div>
+      <p class="km-kicker">{{ .Params.app_status }}</p>
+      <h1>{{ .Title }}</h1>
+      <p class="km-product-strapline">{{ .Params.hero_label }}</p>
+      <p>{{ .Description }}</p>
+      <div class="km-button-row">
+        {{ if .Params.play_store_url }}
+        <a class="km-button km-button--primary" href="{{ .Params.play_store_url }}">Get it on Google Play</a>
+        {{ else }}
+        <span class="km-button km-button--disabled">Google Play listing coming soon</span>
+        {{ end }}
+        <a class="km-button km-button--secondary" href="{{ .Params.support_url | relURL }}">Support</a>
+        <a class="km-button km-button--secondary" href="{{ .Params.privacy_url | relURL }}">Privacy</a>
+      </div>
+    </div>
+    <div class="km-phone-card" aria-label="Dosewise product preview">
+      <div class="km-phone-card__screen">
+        <img src="{{ "/images/dosewise-icon.svg" | relURL }}" alt="Dosewise icon" class="km-app-icon km-app-icon--large">
+        <p class="km-panel-label">Next dose</p>
+        <h2>Clear at a glance</h2>
+        <p>Due, paused, dismissed, and taken states designed for everyday use.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="km-content-block">
+    {{ .Content }}
+  </section>
+
+  <section class="km-section" aria-labelledby="km-features-heading">
+    <div class="km-section__intro">
+      <p class="km-kicker">Features</p>
+      <h2 id="km-features-heading">What Dosewise helps with</h2>
+    </div>
+    <div class="km-card-grid">
+      {{ range .Params.features }}
+      <article class="km-card">
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="km-section km-section--split" aria-labelledby="km-audience-heading">
+    <div>
+      <p class="km-kicker">For</p>
+      <h2 id="km-audience-heading">Who it is for</h2>
+    </div>
+    <ul class="km-check-list">
+      {{ range .Params.audience }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <section class="km-note-box" aria-labelledby="km-safety-heading">
+    <h2 id="km-safety-heading">Important safety notes</h2>
+    <ul>
+      {{ range .Params.notes }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+  </section>
+</main>
+{{ end }}

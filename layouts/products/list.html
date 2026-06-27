@@ -1,0 +1,21 @@
+{{ define "main" }}
+<main class="km-page" role="main">
+  <header class="km-page-header">
+    <p class="km-kicker">Keelmark</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Params.summary }}</p>
+  </header>
+
+  <section class="km-card-grid km-card-grid--products" aria-label="Product list">
+    {{ range .Pages }}
+    <article class="km-card km-card--product">
+      <img src="{{ "/images/dosewise-icon.svg" | relURL }}" alt="" class="km-card-icon">
+      <p class="km-panel-label">{{ .Params.app_status }}</p>
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <p>{{ .Summary | plainify }}</p>
+      <a href="{{ .RelPermalink }}" class="km-text-link">View product</a>
+    </article>
+    {{ end }}
+  </section>
+</main>
+{{ end }}
