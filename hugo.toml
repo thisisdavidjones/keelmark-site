@@ -1,4 +1,8 @@
-baseURL = 'https://keelmark.co.uk/'
+baseURL = 'https://thisisdavidjones.github.io/keelmark-site/'
 languageCode = 'en-gb'
 title = 'Keelmark'
 theme = 'ananke'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
