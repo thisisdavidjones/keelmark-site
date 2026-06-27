@@ -1,6 +1,3 @@
-mkdir .github -ErrorAction SilentlyContinue
-mkdir .github\workflows -ErrorAction SilentlyContinue
-
 @'
 name: Build and deploy Hugo site
 
@@ -19,50 +16,39 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
-defaults:
-  run:
-    shell: bash
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
     env:
-      HUGO_VERSION: 0.163.3
-      TZ: Europe/London
+      HUGO_VERSION: 0.148.2
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v6
+        uses: actions/configure-pages@v5
 
-      - name: Install Hugo
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
+      - name: Build with Hugo
         run: |
-          echo "Installing Hugo ${HUGO_VERSION}..."
-          curl -sfL --output-dir "${{ runner.temp }}" -O "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
-          mkdir "${HOME}/.local/hugo"
-          tar -C "${HOME}/.local/hugo" -xf "${{ runner.temp }}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
-          echo "${HOME}/.local/hugo" >> "${GITHUB_PATH}"
-
-      - name: Log Hugo version
-        run: hugo version
-
-      - name: Build
-        run: |
-          hugo build \
+          hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/" \
-            --cacheDir "${{ runner.temp }}/hugo_cache"
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
@@ -77,5 +63,5 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
-'@ > .github\workflows\hugo.yaml
+        uses: actions/deploy-pages@v4
+'@ | Set-Content -Encoding utf8 .github\workflows\hugo.yaml
