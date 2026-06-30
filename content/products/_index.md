@@ -16,9 +16,11 @@ toc: false
 
   <section class="km-page-section">
     <div class="km-product-showcase km-product-showcase-page">
-      <img class="km-product-icon" src="/assets/dosewise-icon.svg" alt="Dosewise app icon">
+      <div class="km-product-brand-card km-product-brand-card-page">
+        <img class="km-dosewise-logo-horizontal" src="/assets/dosewise/dosewise-site-card-icon.png" alt="Dosewise app icon">
+      </div>
       <div class="km-product-copy">
-        <p class="km-kicker">Medication timing</p>
+        <p class="km-kicker">Medication schedule tracker</p>
         <h2>Dosewise</h2>
         <p>Record medication doses, check timing, and keep a clear history on Android.</p>
         <a class="km-button" href="/products/dosewise/">View Dosewise</a>

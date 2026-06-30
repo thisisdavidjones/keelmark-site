@@ -9,7 +9,7 @@ toc: false
 
 <div class="km-page">
   <header class="km-page-header km-product-header">
-    <img class="km-product-icon" src="/assets/dosewise-icon.svg" alt="Dosewise app icon">
+    <img class="km-dosewise-logo-stacked" src="/assets/dosewise/dosewise-site-header-icon.png" alt="Dosewise app icon">
     <div>
       <p class="km-kicker">Dosewise</p>
       <h1>Medication timing and dose logging for Android.</h1>
@@ -35,7 +35,8 @@ toc: false
     </div>
   </section>
 
-  <section class="km-page-section km-panel">
+  <section class="km-page-section km-panel km-dosewise-dark-panel">
+    <img class="km-dosewise-panel-icon" src="/assets/dosewise/dosewise-site-panel-icon.png" alt="Dosewise app icon">
     <h2>Availability</h2>
     <p>Dosewise is being prepared for Android. Replace the placeholder badge with the official Google Play badge and link when the listing is live.</p>
     <a href="#"><img class="km-play-badge" src="/assets/google-play-badge-placeholder.svg" alt="Google Play listing placeholder"></a>

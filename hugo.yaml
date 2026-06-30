@@ -14,6 +14,7 @@ markup:
 
 params:
   description: "Practical Android apps for everyday routines."
+  favicon: favicon.ico
   page:
     width: wide
   navbar:
@@ -21,11 +22,11 @@ params:
     displayTitle: false
     displayLogo: true
     logo:
-      path: assets/keelmark-logo.svg
-      dark: assets/keelmark-logo-white.svg
+      path: assets/keelmark/keelmark-horizontal.svg
+      dark: assets/keelmark/keelmark-horizontal.svg
       link: /
-      width: 176
-      height: 44
+      width: 250
+      height: 75
   footer:
     width: wide
   theme:

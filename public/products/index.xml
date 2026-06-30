@@ -25,7 +25,7 @@
         
         &lt;div class=&#34;km-page&#34;&gt;
   &lt;header class=&#34;km-page-header km-product-header&#34;&gt;
-    &lt;img class=&#34;km-product-icon&#34; src=&#34;http://localhost:1313/assets/dosewise-icon.svg&#34; alt=&#34;Dosewise app icon&#34;&gt;
+    &lt;img class=&#34;km-dosewise-logo-stacked&#34; src=&#34;http://localhost:1313/assets/dosewise/dosewise-site-header-icon.png&#34; alt=&#34;Dosewise app icon&#34;&gt;
     &lt;div&gt;
       &lt;p class=&#34;km-kicker&#34;&gt;Dosewise&lt;/p&gt;
       &lt;h1&gt;Medication timing and dose logging for Android.&lt;/h1&gt;
@@ -48,7 +48,8 @@
       &lt;article class=&#34;km-card&#34;&gt;&lt;h3&gt;Local first&lt;/h3&gt;&lt;p&gt;Designed to work without an unnecessary account.&lt;/p&gt;&lt;/article&gt;
     &lt;/div&gt;
   &lt;/section&gt;
-  &lt;section class=&#34;km-page-section km-panel&#34;&gt;
+  &lt;section class=&#34;km-page-section km-panel km-dosewise-dark-panel&#34;&gt;
+    &lt;img class=&#34;km-dosewise-panel-icon&#34; src=&#34;http://localhost:1313/assets/dosewise/dosewise-site-panel-icon.png&#34; alt=&#34;Dosewise app icon&#34;&gt;
     &lt;h2&gt;Availability&lt;/h2&gt;
     &lt;p&gt;Dosewise is being prepared for Android. Replace the placeholder badge with the official Google Play badge and link when the listing is live.&lt;/p&gt;
     &lt;a href=&#34;#&#34;&gt;&lt;img class=&#34;km-play-badge&#34; src=&#34;http://localhost:1313/assets/google-play-badge-placeholder.svg&#34; alt=&#34;Google Play listing placeholder&#34;&gt;&lt;/a&gt;

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="3600" height="1040" viewBox="0 0 3600 1040">
+  <defs>
+    <radialGradient id="blueDisc" cx="34%" cy="23%" r="77%">
+      <stop offset="0%" stop-color="#47B7FF"/>
+      <stop offset="48%" stop-color="#1589F6"/>
+      <stop offset="100%" stop-color="#095AE1"/>
+    </radialGradient>
+    <radialGradient id="blueGlow" cx="32%" cy="23%" r="46%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mintStroke" x1="180" y1="120" x2="700" y2="700" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#90F7ED"/>
+      <stop offset="56%" stop-color="#64E8DD"/>
+      <stop offset="100%" stop-color="#32D6D2"/>
+    </linearGradient>
+    <linearGradient id="pillGrad" x1="320" y1="255" x2="790" y2="780" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="54%" stop-color="#FAFBFF"/>
+      <stop offset="100%" stop-color="#CDD7EB"/>
+    </linearGradient>
+    <linearGradient id="pillEdgeShadow" x1="510" y1="245" x2="830" y2="730" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#A1B2D1" stop-opacity="0.26"/>
+    </linearGradient>
+    <linearGradient id="seamGrad" x1="0" y1="-170" x2="0" y2="170" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EAF3FF"/>
+      <stop offset="100%" stop-color="#7AA1D8"/>
+    </linearGradient>
+    <radialGradient id="badgeGrad" cx="34%" cy="26%" r="78%">
+      <stop offset="0%" stop-color="#74F5E9"/>
+      <stop offset="58%" stop-color="#29D6CB"/>
+      <stop offset="100%" stop-color="#10B8C4"/>
+    </radialGradient>
+    <filter id="discShadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#003B8B" flood-opacity="0.17"/></filter>
+    <filter id="clockShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="3" stdDeviation="3.5" flood-color="#0068A6" flood-opacity="0.18"/></filter>
+    <filter id="pillShadow" x="-35%" y="-35%" width="170%" height="170%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#003A87" flood-opacity="0.25"/></filter>
+    <filter id="badgeShadow" x="-35%" y="-35%" width="170%" height="170%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#004A8E" flood-opacity="0.26"/></filter>
+    <clipPath id="clipRight"><path d="M 4.00,-144.00 L 194.00,-144.00 A 144.00,144.00 0 0 1 194.00,144.00 L 4.00,144.00 Z"/></clipPath>
+    <clipPath id="clipLeft"><path d="M -4.00,-144.00 L -194.00,-144.00 A 144.00,144.00 0 0 0 -194.00,144.00 L -4.00,144.00 Z"/></clipPath>
+  </defs>
+  <rect width="3600" height="1040" fill="none"/>
+  <g transform="translate(22 16) scale(0.28)">
+  <circle cx="511.5" cy="510.5" r="449.8" fill="url(#blueDisc)" filter="url(#discShadow)"/>
+  <circle cx="511.5" cy="510.5" r="449.8" fill="url(#blueGlow)" opacity="0.40"/>
+  <g filter="url(#clockShadow)">
+    <path d="M 292.98,601.35 A 231.80,231.80 0 1 1 618.60,273.45" fill="none" stroke="url(#mintStroke)" stroke-width="29" stroke-linecap="round"/>
+    <line x1="442" y1="233" x2="442" y2="267" stroke="url(#mintStroke)" stroke-width="13" stroke-linecap="round"/>
+    <line x1="254" y1="427" x2="293" y2="427" stroke="url(#mintStroke)" stroke-width="13" stroke-linecap="round"/>
+    <line x1="421" y1="422" x2="321" y2="322" stroke="url(#mintStroke)" stroke-width="19" stroke-linecap="round"/>
+    <line x1="421" y1="422" x2="514" y2="329" stroke="url(#mintStroke)" stroke-width="19" stroke-linecap="round"/>
+    <circle cx="421" cy="422" r="20" fill="url(#mintStroke)"/>
+  </g>
+  <g transform="translate(551.0 537.5) rotate(-45.0)" filter="url(#pillShadow)">
+    <path d="M 4.00,-144.00 L 194.00,-144.00 A 144.00,144.00 0 0 1 194.00,144.00 L 4.00,144.00 Z" fill="url(#pillGrad)"/>
+    <path d="M -4.00,-144.00 L -194.00,-144.00 A 144.00,144.00 0 0 0 -194.00,144.00 L -4.00,144.00 Z" fill="url(#pillGrad)"/>
+    <path d="M 4.00,-144.00 L 194.00,-144.00 A 144.00,144.00 0 0 1 194.00,144.00 L 4.00,144.00 Z" fill="url(#pillEdgeShadow)"/>
+    <path d="M -4.00,-144.00 L -194.00,-144.00 A 144.00,144.00 0 0 0 -194.00,144.00 L -4.00,144.00 Z" fill="url(#pillEdgeShadow)"/>
+    <g clip-path="url(#clipRight)"><ellipse cx="145" cy="-52" rx="168" ry="82" fill="#FFFFFF" opacity="0.34"/><ellipse cx="128" cy="28" rx="120" ry="178" fill="#B9C4D8" opacity="0.12" transform="rotate(18 128 28)"/><ellipse cx="184" cy="54" rx="98" ry="146" fill="#A8B8D2" opacity="0.08" transform="rotate(22 184 54)"/></g>
+    <g clip-path="url(#clipLeft)"><ellipse cx="-154" cy="-84" rx="170" ry="92" fill="#FFFFFF" opacity="0.19"/><ellipse cx="-64" cy="74" rx="172" ry="104" fill="#B8C2D3" opacity="0.07"/></g>
+    <line x1="-3.5" y1="-135" x2="-3.5" y2="135" stroke="url(#seamGrad)" stroke-width="5" stroke-linecap="round" opacity="0.95"/>
+    <line x1="10.2" y1="-132" x2="10.2" y2="132" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" opacity="0.70"/>
+  </g>
+  <g filter="url(#badgeShadow)">
+    <circle cx="683.0" cy="687.0" r="126.5" fill="url(#badgeGrad)"/>
+    <circle cx="683.0" cy="687.0" r="125.0" fill="none" stroke="#79F7EB" stroke-width="3" opacity="0.35"/><ellipse cx="642" cy="628" rx="70" ry="34" fill="#C8FFF8" opacity="0.16"/>
+    <path d="M 615,687 L 662,734 L 747,649" fill="none" stroke="#D8E1EE" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" opacity="0.55" transform="translate(0 5)"/>
+    <path d="M 615,687 L 662,734 L 747,649" fill="none" stroke="#FFFFFF" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</g>
+  <text x="1095" y="592" font-family="Noto Sans, DejaVu Sans, Arial, sans-serif" font-size="430" font-weight="700" letter-spacing="-6" fill="#113B88">Dosewise</text>
+  <text x="1108" y="772" font-family="Noto Sans, DejaVu Sans, Arial, sans-serif" font-size="110" font-weight="400" letter-spacing="2" fill="#41526B">MEDICATION SCHEDULE TRACKER</text>
+</svg>

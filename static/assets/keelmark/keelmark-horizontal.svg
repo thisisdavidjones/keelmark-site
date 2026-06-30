@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Keelmark horizontal logo">
+  <title>Keelmark horizontal logo</title>
+
+  <g transform="translate(60 35) scale(0.54)">
+    <path d="M 286 58 L 150 203 C 151 268 184 333 230 394 C 279 303 309 171 286 58 Z" fill="#082B4A"/>
+    <path d="M 336 76 C 323 190 288 315 224 432 L 196 392 C 255 296 300 169 336 76 Z" fill="#C99A3A"/>
+  </g>
+  <text x="325" y="214" font-family="Montserrat, Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="82" font-weight="600" letter-spacing="12" fill="#082B4A">KEELMARK</text>
+</svg>

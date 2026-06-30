@@ -50,7 +50,9 @@ toc: false
   <section class="km-featured" aria-labelledby="dosewise-title">
     <div class="km-wrap">
       <div class="km-product-showcase">
-        <img class="km-product-icon" src="/assets/dosewise-icon.svg" alt="Dosewise app icon">
+        <div class="km-product-brand-card">
+          <img class="km-dosewise-logo-horizontal" src="/assets/dosewise/dosewise-site-card-icon.png" alt="Dosewise app icon">
+        </div>
         <div class="km-product-copy">
           <p class="km-kicker">Featured app</p>
           <h2 id="dosewise-title">Dosewise</h2>
@@ -61,7 +63,7 @@ toc: false
         <div class="km-product-list-wrap">
           <ul class="km-check-list">
             <li>Track multiple medications</li>
-            <li>Custom schedules and reminders</li>
+            <li>Daily and weekly schedules</li>
             <li>Dose history and review</li>
             <li>Works without an account</li>
           </ul>
