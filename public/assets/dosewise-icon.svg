@@ -1,37 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
-<title id="title">Dosewise icon</title>
-<desc id="desc">A clock face partly covered by a green and white pill.</desc>
+<title>Dosewise icon</title><desc>Clock face with a diagonal capsule.</desc>
 <defs>
-  <radialGradient id="bg" cx="38%" cy="28%" r="74%">
-    <stop offset="0" stop-color="#eefdf7"/>
-    <stop offset="0.62" stop-color="#d8f3e8"/>
-    <stop offset="1" stop-color="#c5eadc"/>
-  </radialGradient>
-  <linearGradient id="green" x1="256" y1="265" x2="393" y2="403" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stop-color="#00826e"/>
-    <stop offset="1" stop-color="#004f46"/>
-  </linearGradient>
-  <linearGradient id="whitePill" x1="304" y1="205" x2="449" y2="348" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stop-color="#ffffff"/>
-    <stop offset="0.52" stop-color="#f4f7f8"/>
-    <stop offset="1" stop-color="#dfe8ea"/>
-  </linearGradient>
-  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-    <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#052e2a" flood-opacity="0.27"/>
-  </filter>
+  <linearGradient id="bg" x1="64" y1="448" x2="448" y2="64" gradientUnits="userSpaceOnUse"><stop stop-color="#dff3eb"/><stop offset="1" stop-color="#f4fbf7"/></linearGradient>
+  <linearGradient id="teal" x1="176" y1="402" x2="345" y2="242" gradientUnits="userSpaceOnUse"><stop stop-color="#006b5c"/><stop offset="1" stop-color="#36b295"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#062d2a" flood-opacity=".22"/></filter>
 </defs>
-<rect width="512" height="512" rx="92" fill="url(#bg)"/>
+<rect x="24" y="24" width="464" height="464" rx="92" fill="url(#bg)"/>
 <g filter="url(#shadow)">
-  <path d="M122 347a154 154 0 1 1 263-95" fill="none" stroke="#04594e" stroke-width="26" stroke-linecap="round"/>
-  <path d="M256 118v31M154 221h-31M360 151l-18 25" stroke="#04594e" stroke-width="18" stroke-linecap="round"/>
-  <path d="M256 256l-2-87" stroke="#04594e" stroke-width="18" stroke-linecap="round"/>
-  <path d="M256 256l-70 51" stroke="#04594e" stroke-width="16" stroke-linecap="round"/>
-  <circle cx="256" cy="256" r="13" fill="#04594e"/>
-  <g transform="rotate(-45 337 325)">
-    <rect x="218" y="247" width="238" height="126" rx="63" fill="url(#whitePill)" stroke="#053a35" stroke-width="10"/>
-    <path d="M218 310h119v63H281c-35 0-63-28-63-63Z" fill="url(#green)"/>
-    <path d="M337 247v126" stroke="#063f39" stroke-width="8" stroke-linecap="round" opacity="0.5"/>
-    <path d="M250 272c15-10 35-15 60-16" stroke="#ffffff" stroke-width="9" stroke-linecap="round" opacity="0.28"/>
+  <circle cx="236" cy="236" r="148" fill="none" stroke="#00534a" stroke-width="24"/>
+  <path d="M236 105v35M236 332v35M105 236h35M332 236h35M322 150l-24 24M150 322l24-24" stroke="#00534a" stroke-width="18" stroke-linecap="round"/>
+  <path d="M236 236l-1-78M236 236l76 50" stroke="#00534a" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(268 306) rotate(-43)">
+    <rect x="-78" y="-54" width="240" height="108" rx="54" fill="#fff" stroke="#073d38" stroke-width="12"/>
+    <path d="M42-54h66a54 54 0 0 1 0 108H42z" fill="url(#teal)"/>
+    <path d="M42-54v108" stroke="#073d38" stroke-width="9"/>
+    <path d="M-44 -37h78" stroke="#ffffff" stroke-width="12" stroke-linecap="round" opacity=".65"/>
   </g>
 </g>
 </svg>

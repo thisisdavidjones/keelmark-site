@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 646 190" role="img" aria-labelledby="title desc">
-<title id="title">Google Play badge placeholder</title>
-<desc id="desc">A placeholder badge for a future Google Play store link.</desc>
-<rect x="5" y="5" width="636" height="180" rx="24" fill="#05070a" stroke="#c9d0d8" stroke-width="10"/>
-<path d="M92 51v88l70-44-70-44Z" fill="#3ddc84"/>
-<path d="M92 51l45 44-45 44V51Z" fill="#00a1ff" opacity="0.86"/>
-<path d="M137 95l25 0-70 44 45-44Z" fill="#ffce00" opacity="0.92"/>
-<text x="205" y="76" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="28" font-weight="600" fill="#ffffff">GET IT ON</text>
-<text x="205" y="130" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff">Google Play</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 646 190" role="img" aria-labelledby="title">
+<title>Get it on Google Play placeholder</title>
+<rect x="4" y="4" width="638" height="182" rx="22" fill="#050505" stroke="#a6a6a6" stroke-width="8"/>
+<path d="M70 47c-5 3-8 10-8 20v56c0 10 3 17 8 20l62-48-62-48Z" fill="#38bdf8"/>
+<path d="M70 47 147 95l25-19L90 31c-8-4-15-5-20 16Z" fill="#22c55e"/>
+<path d="M147 95 70 143c5 21 12 20 20 16l82-45-25-19Z" fill="#f59e0b"/>
+<path d="M172 76 147 95l25 19 24-14c9-5 9-15 0-20l-24-14Z" fill="#ef4444"/>
+<text x="240" y="76" fill="#ffffff" font-family="Arial, sans-serif" font-size="30" font-weight="500">GET IT ON</text>
+<text x="240" y="132" fill="#ffffff" font-family="Arial, sans-serif" font-size="54" font-weight="700">Google Play</text>
 </svg>
