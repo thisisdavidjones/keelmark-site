@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="title desc">
+<title id="title">Abstract sailing background</title>
+<desc id="desc">A calm sea, warm horizon, and abstract yacht sail used as a background image.</desc>
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#f7fbff"/>
+    <stop offset="0.45" stop-color="#edf5ff"/>
+    <stop offset="1" stop-color="#f9dfc4"/>
+  </linearGradient>
+  <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#dbeeff"/>
+    <stop offset="0.6" stop-color="#9fb9d2"/>
+    <stop offset="1" stop-color="#425b77"/>
+  </linearGradient>
+  <linearGradient id="sail" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fff4e7" stop-opacity="0.92"/>
+    <stop offset="0.48" stop-color="#ffffff" stop-opacity="0.58"/>
+    <stop offset="1" stop-color="#f0b078" stop-opacity="0.5"/>
+  </linearGradient>
+  <linearGradient id="deck" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#e9edf2"/>
+    <stop offset="1" stop-color="#ffffff"/>
+  </linearGradient>
+  <radialGradient id="sun" cx="75%" cy="43%" r="26%">
+    <stop offset="0" stop-color="#fff1c8" stop-opacity="0.95"/>
+    <stop offset="0.3" stop-color="#ffd8a8" stop-opacity="0.42"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+    <feGaussianBlur stdDeviation="3"/>
+  </filter>
+</defs>
+<rect width="1600" height="760" fill="url(#sky)"/>
+<circle cx="1195" cy="328" r="250" fill="url(#sun)"/>
+<path d="M0 374c148-24 278-21 418-2 137 18 246 36 395 7 143-27 246-64 399-42 165 23 258 51 388 28v395H0Z" fill="url(#sea)" opacity="0.92"/>
+<g opacity="0.42" stroke="#ffffff" stroke-width="3" filter="url(#soft)">
+  <path d="M0 465c148-26 267-28 407-9 132 18 254 33 410 0 164-34 275-54 430-26 142 26 224 34 353 5" fill="none"/>
+  <path d="M0 526c130-18 275-22 438 1 132 18 275 28 423-7 142-33 270-40 421-9 108 22 204 28 318 7" fill="none"/>
+  <path d="M0 603c162-23 289-18 438 2 146 20 273 14 404-14 163-35 314-26 455 4 118 26 217 20 303 5" fill="none"/>
+</g>
+<g transform="translate(910 -60)">
+  <path d="M308 68v616" stroke="#1e3550" stroke-width="7" opacity="0.7"/>
+  <path d="M314 73c-108 222-129 393-85 535 150-119 253-271 329-478-70-43-153-62-244-57Z" fill="url(#sail)" stroke="#704f40" stroke-width="4" opacity="0.9"/>
+  <path d="M316 84c32 170 26 338-12 501" stroke="#5e6670" stroke-width="3" opacity="0.55" fill="none"/>
+  <path d="M310 190 557 128M308 392l-81 216" stroke="#1e3550" stroke-width="3" opacity="0.35" fill="none"/>
+  <path d="M78 690c185-52 369-67 571-46l-36 52H95Z" fill="url(#deck)" stroke="#b8c1cc" stroke-width="3"/>
+  <path d="M0 720h720" stroke="#1e3550" stroke-width="5" opacity="0.45"/>
+</g>
+<rect width="1600" height="760" fill="#ffffff" opacity="0.12"/>
+</svg>

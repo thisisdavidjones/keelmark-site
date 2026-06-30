@@ -1,0 +1,83 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Keelmark – Products</title>
+    <link>http://localhost:1313/products/</link>
+    <description>Recent content in Products on Keelmark</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="http://localhost:1313/products/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Dosewise</title>
+      <link>http://localhost:1313/products/dosewise/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/products/dosewise/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;km-page&#34;&gt;
+  &lt;header class=&#34;km-page-header&#34;&gt;
+    &lt;p class=&#34;km-eyebrow&#34;&gt;Dosewise&lt;/p&gt;
+    &lt;h1&gt;Medication timing and dose logging for Android.&lt;/h1&gt;
+    &lt;p&gt;Dosewise helps you record medication doses, check when the next dose is due, and keep a clear dose history.&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;section class=&#34;km-page-section km-split&#34;&gt;
+    &lt;div&gt;
+      &lt;img class=&#34;km-product-art&#34; src=&#34;http://localhost:1313/assets/dosewise-icon.svg&#34; alt=&#34;Dosewise app icon&#34;&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;h2&gt;What it is for&lt;/h2&gt;
+      &lt;p&gt;Medication can become so familiar that it is easy to forget whether you have just taken a dose. Dosewise is built around that very ordinary problem.&lt;/p&gt;
+      &lt;p&gt;The app is intended to help with routine tracking: what was taken, when it was taken, and what the timing rules say about the next dose.&lt;/p&gt;
+      &lt;p class=&#34;km-note&#34;&gt;Dosewise is not medical advice and does not decide what medication you should take. Medication instructions should come from your clinician, pharmacist, or the medicine label.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;section class=&#34;km-page-section&#34;&gt;
+    &lt;h2&gt;Core features&lt;/h2&gt;
+    &lt;div class=&#34;km-card-grid&#34;&gt;
+      &lt;div class=&#34;km-card&#34;&gt;
+        &lt;h3&gt;Dose recording&lt;/h3&gt;
+        &lt;p&gt;Record when a medication was taken and keep a history of previous doses.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;km-card&#34;&gt;
+        &lt;h3&gt;Timing checks&lt;/h3&gt;
+        &lt;p&gt;See whether enough time has passed before the next dose.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;km-card&#34;&gt;
+        &lt;h3&gt;Medication setup&lt;/h3&gt;
+        &lt;p&gt;Add medications with dose rules, daily limits, and schedule details.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;km-card&#34;&gt;
+        &lt;h3&gt;Weekly routines&lt;/h3&gt;
+        &lt;p&gt;Support for medicines taken on selected days rather than only daily intervals.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;km-card&#34;&gt;
+        &lt;h3&gt;Readable history&lt;/h3&gt;
+        &lt;p&gt;A clear record helps answer the question: what happened today?&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;km-card&#34;&gt;
+        &lt;h3&gt;Local first&lt;/h3&gt;
+        &lt;p&gt;Designed to work without an unnecessary account. Add cloud features only if they earn their keep.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;section class=&#34;km-page-section km-panel&#34;&gt;
+    &lt;h2&gt;Availability&lt;/h2&gt;
+    &lt;p&gt;Dosewise is being prepared for Android. Replace this section with the live Google Play link when the listing is ready.&lt;/p&gt;
+    &lt;a href=&#34;#&#34;&gt;&lt;img class=&#34;km-play-badge&#34; src=&#34;http://localhost:1313/assets/google-play-badge-placeholder.svg&#34; alt=&#34;Google Play listing placeholder&#34;&gt;&lt;/a&gt;
+  &lt;/section&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

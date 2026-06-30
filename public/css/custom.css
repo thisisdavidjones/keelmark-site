@@ -1,0 +1,509 @@
+:root {
+  --primary-hue: 214deg;
+  --primary-saturation: 86%;
+  --primary-lightness: 36%;
+  --km-ink: #071a33;
+  --km-ink-soft: #38506d;
+  --km-blue: #073f88;
+  --km-blue-2: #0d47a1;
+  --km-teal: #00796b;
+  --km-line: #dce6f2;
+  --km-paper: #ffffff;
+  --km-paper-soft: #f6f9fd;
+  --km-navy: #001d3d;
+  --km-shadow: 0 18px 48px rgba(7, 26, 51, 0.12);
+  --hextra-max-page-width: 90rem;
+  --hextra-max-navbar-width: 90rem;
+  --hextra-max-footer-width: 90rem;
+}
+
+.content .km-landing,
+.content .km-page {
+  color: var(--km-ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.content .km-landing * ,
+.content .km-page * {
+  box-sizing: border-box;
+}
+
+.content .km-landing a,
+.content .km-page a {
+  text-decoration: none;
+}
+
+.content .km-landing p,
+.content .km-page p {
+  line-height: 1.68;
+  color: var(--km-ink-soft);
+}
+
+.content .km-landing h1,
+.content .km-page h1,
+.content .km-landing h2,
+.content .km-page h2,
+.content .km-landing h3,
+.content .km-page h3 {
+  color: var(--km-ink);
+  letter-spacing: -0.03em;
+  line-height: 1.06;
+  margin-top: 0;
+}
+
+.content .km-landing {
+  margin-top: -1.25rem;
+}
+
+.km-wrap {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.km-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 34px 34px;
+  min-height: 560px;
+  margin-inline: calc(50% - 50vw);
+  background:
+    linear-gradient(90deg, rgba(246, 250, 255, 0.98) 0%, rgba(246, 250, 255, 0.88) 35%, rgba(246, 250, 255, 0.38) 68%, rgba(255, 255, 255, 0.08) 100%),
+    url("/assets/keelmark-hero-sail.svg") center right / cover no-repeat;
+  border-bottom: 1px solid rgba(7, 26, 51, 0.08);
+}
+
+.km-hero .km-wrap {
+  min-height: 560px;
+  display: grid;
+  align-items: center;
+}
+
+.km-hero-content {
+  max-width: 640px;
+  padding: 5rem 0 6rem;
+}
+
+.km-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1.25rem;
+  color: var(--km-blue);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+}
+
+.km-eyebrow::before {
+  content: "";
+  width: 34px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 999px;
+}
+
+.km-hero h1 {
+  font-size: clamp(2.8rem, 7vw, 5.25rem);
+  max-width: 700px;
+  margin-bottom: 1.2rem;
+}
+
+.km-hero h1 span {
+  color: var(--km-blue-2);
+}
+
+.km-lede {
+  max-width: 560px;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  margin-bottom: 2rem;
+}
+
+.km-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.km-button,
+.km-button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.85rem 1.2rem;
+  border-radius: 12px;
+  font-weight: 800;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.km-button {
+  background: linear-gradient(135deg, #074a9f, #002f70);
+  color: #ffffff !important;
+  box-shadow: 0 12px 28px rgba(7, 74, 159, 0.26);
+}
+
+.km-button-secondary {
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--km-ink) !important;
+  border: 1px solid rgba(7, 26, 51, 0.24);
+}
+
+.km-button:hover,
+.km-button-secondary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 36px rgba(7, 26, 51, 0.16);
+}
+
+.km-principles {
+  margin-top: -4.4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.km-principle-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(7, 26, 51, 0.08);
+  border-radius: 20px;
+  box-shadow: var(--km-shadow);
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+}
+
+.km-principle {
+  padding: 2rem 1.4rem;
+  text-align: center;
+  min-height: 168px;
+}
+
+.km-principle + .km-principle {
+  border-left: 1px solid var(--km-line);
+}
+
+.km-icon {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 1rem;
+  color: var(--km-blue-2);
+}
+
+.km-principle h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.45rem;
+}
+
+.km-principle p {
+  font-size: 0.94rem;
+  margin: 0;
+}
+
+.km-section {
+  padding: 5rem 0;
+}
+
+.km-section-muted {
+  margin-inline: calc(50% - 50vw);
+  background: linear-gradient(180deg, #f6f9fd 0%, #ffffff 100%);
+  border-block: 1px solid rgba(7, 26, 51, 0.06);
+}
+
+.km-section-title {
+  max-width: 760px;
+  margin-bottom: 2.2rem;
+}
+
+.km-section-title h2 {
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  margin-bottom: 0.8rem;
+}
+
+.km-product-card {
+  display: grid;
+  grid-template-columns: minmax(180px, 260px) 1.2fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+  background: var(--km-paper);
+  border: 1px solid rgba(7, 26, 51, 0.08);
+  border-radius: 28px;
+  padding: clamp(1.3rem, 4vw, 3rem);
+  box-shadow: 0 24px 70px rgba(7, 26, 51, 0.09);
+}
+
+.km-product-art {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 28px;
+  box-shadow: 0 18px 38px rgba(0, 79, 70, 0.19);
+}
+
+.km-kicker {
+  display: block;
+  color: var(--km-blue);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-weight: 900;
+  margin-bottom: 0.55rem;
+}
+
+.km-product-copy h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0.4rem;
+}
+
+.km-product-copy p {
+  margin-bottom: 1rem;
+}
+
+.km-play-badge {
+  display: inline-block;
+  width: 170px;
+  margin-top: 0.4rem;
+}
+
+.km-check-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.km-check-list li {
+  position: relative;
+  padding-left: 1.9rem;
+  color: #17304c;
+}
+
+.km-check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: -0.08rem;
+  color: var(--km-teal);
+  font-weight: 900;
+}
+
+.km-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+}
+
+.km-card {
+  background: #ffffff;
+  border: 1px solid rgba(7, 26, 51, 0.08);
+  border-radius: 22px;
+  padding: 1.5rem;
+  box-shadow: 0 14px 36px rgba(7, 26, 51, 0.06);
+}
+
+.km-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.km-card p {
+  margin: 0;
+}
+
+.km-split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.km-panel {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid rgba(7, 26, 51, 0.08);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 18px 44px rgba(7, 26, 51, 0.08);
+}
+
+.km-panel h2,
+.km-panel h3 {
+  margin-bottom: 0.7rem;
+}
+
+.km-page {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.km-page-header {
+  padding: 3rem 0 1.5rem;
+  border-bottom: 1px solid var(--km-line);
+  margin-bottom: 2.4rem;
+}
+
+.km-page-header h1 {
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  margin-bottom: 0.8rem;
+}
+
+.km-page-header p {
+  max-width: 760px;
+  font-size: 1.16rem;
+}
+
+.km-page-section {
+  margin: 2.4rem 0;
+}
+
+.km-page-section h2 {
+  font-size: clamp(1.65rem, 3vw, 2.2rem);
+  margin-bottom: 0.7rem;
+}
+
+.km-note {
+  border-left: 4px solid var(--km-blue-2);
+  background: #f3f8ff;
+  padding: 1rem 1.1rem;
+  border-radius: 0 14px 14px 0;
+  color: var(--km-ink-soft);
+}
+
+.km-footer-custom {
+  margin-inline: calc(50% - 50vw);
+  background: radial-gradient(circle at 12% 0%, #0b4a96 0%, #001d3d 46%, #00142c 100%);
+  color: #dbeafe;
+  padding: 3.2rem 0;
+}
+
+.km-footer-grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.4fr) repeat(3, minmax(130px, 0.55fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.km-footer-logo {
+  width: 220px;
+  max-width: 100%;
+  margin-bottom: 0.8rem;
+}
+
+.km-footer-custom h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  margin: 0 0 0.85rem;
+}
+
+.km-footer-custom p,
+.km-footer-custom a {
+  color: #dbeafe !important;
+  font-size: 0.95rem;
+}
+
+.km-footer-links {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.km-footer-links a:hover {
+  color: #ffffff !important;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+html[class~="dark"] .content .km-landing,
+html[class~="dark"] .content .km-page {
+  --km-ink: #eef6ff;
+  --km-ink-soft: #bfd0e6;
+  --km-line: rgba(219, 234, 254, 0.16);
+  --km-paper: #071a33;
+  --km-paper-soft: #06162d;
+}
+
+html[class~="dark"] .km-hero {
+  background:
+    linear-gradient(90deg, rgba(2, 14, 31, 0.98) 0%, rgba(2, 14, 31, 0.86) 42%, rgba(2, 14, 31, 0.48) 70%, rgba(2, 14, 31, 0.18) 100%),
+    url("/assets/keelmark-hero-sail.svg") center right / cover no-repeat;
+}
+
+html[class~="dark"] .km-principle-grid,
+html[class~="dark"] .km-product-card,
+html[class~="dark"] .km-card,
+html[class~="dark"] .km-panel {
+  background: rgba(7, 26, 51, 0.92);
+  border-color: rgba(219, 234, 254, 0.14);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+html[class~="dark"] .km-button-secondary {
+  background: rgba(7, 26, 51, 0.7);
+  color: #ffffff !important;
+  border-color: rgba(219, 234, 254, 0.28);
+}
+
+html[class~="dark"] .km-section-muted {
+  background: linear-gradient(180deg, #06162d 0%, #071a33 100%);
+}
+
+html[class~="dark"] .km-check-list li {
+  color: #dbeafe;
+}
+
+html[class~="dark"] .km-note {
+  background: rgba(13, 71, 161, 0.18);
+}
+
+@media (max-width: 980px) {
+  .km-principle-grid,
+  .km-card-grid,
+  .km-footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .km-product-card,
+  .km-split {
+    grid-template-columns: 1fr;
+  }
+
+  .km-product-art {
+    max-width: 190px;
+  }
+}
+
+@media (max-width: 640px) {
+  .km-hero,
+  .km-hero .km-wrap {
+    min-height: auto;
+  }
+
+  .km-hero-content {
+    padding: 4rem 0 6rem;
+  }
+
+  .km-actions {
+    align-items: stretch;
+  }
+
+  .km-button,
+  .km-button-secondary {
+    width: 100%;
+  }
+
+  .km-principle-grid,
+  .km-card-grid,
+  .km-footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .km-principle + .km-principle {
+    border-left: 0;
+    border-top: 1px solid var(--km-line);
+  }
+
+  .km-section {
+    padding: 3.3rem 0;
+  }
+}

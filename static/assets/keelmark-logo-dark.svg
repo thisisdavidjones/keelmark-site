@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 128" role="img" aria-labelledby="title desc">
+<title id="title">Keelmark logo dark</title>
+<desc id="desc">Keelmark wordmark with a stylised sail and keel symbol for dark backgrounds.</desc>
+<defs>
+  <linearGradient id="sail" x1="24" y1="18" x2="94" y2="104" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#ffffff"/>
+    <stop offset="1" stop-color="#9fc7ff"/>
+  </linearGradient>
+  <linearGradient id="keel" x1="67" y1="32" x2="106" y2="105" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#75d4ff"/>
+    <stop offset="1" stop-color="#2e7dd7"/>
+  </linearGradient>
+</defs>
+<g transform="translate(0 0)">
+  <rect width="128" height="128" rx="28" fill="#06264c"/>
+  <path d="M24 92C35 67 49 39 69 16c-3 29-1 58 8 89H24Z" fill="url(#sail)"/>
+  <path d="M76 34c7 18 19 41 31 65H84c-6-21-9-43-8-65Z" fill="url(#keel)"/>
+  <path d="M27 97h82c-15 9-35 14-57 14-10 0-18-1-25-4v-10Z" fill="#ffffff" opacity="0.88"/>
+</g>
+<text x="154" y="82" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="56" font-weight="800" fill="#ffffff" letter-spacing="-1.8">Keelmark</text>
+</svg>
