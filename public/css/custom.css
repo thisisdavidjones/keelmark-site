@@ -66,7 +66,6 @@ body:has(.km-landing) .content {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
-body:has(.km-landing) .hextra-sidebar-container,
 body:has(.km-landing) .hextra-toc {
   display: none !important;
 }
@@ -80,6 +79,26 @@ body:has(.km-landing) main [class*="hx-max-w"] {
 body:has(.km-landing) main [class*="hx-px-"] {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+
+/* Interior page hardening for Hextra.
+   Hextra injects a normal page title before custom marketing-page HTML; hide that
+   only where a .km-page shell exists. */
+body:has(.km-page) .content > h1:first-child,
+body:has(.km-page) article > h1:first-child,
+body:has(.km-page) main > h1:first-child,
+body:has(.km-page) main > div > h1:first-child,
+body:has(.km-page) main > div > div > h1:first-child {
+  display: none !important;
+}
+body:has(.km-page) .hextra-toc {
+  display: none !important;
+}
+body:has(.km-page) main,
+body:has(.km-page) article,
+body:has(.km-page) .content {
+  max-width: none !important;
 }
 
 .hextra-nav-container {
@@ -367,76 +386,188 @@ body:has(.km-landing) main [class*="hx-px-"] {
   color: var(--km-blue) !important;
 }
 
-/* Standard content pages */
+
+/* v6: lighter interior marketing pages. These rules deliberately replace the
+   heavier v5 page-card treatment without changing the homepage. */
+body:has(.km-page) main,
+body:has(.km-page) article,
+body:has(.km-page) .content {
+  max-width: none !important;
+  padding-top: 0 !important;
+}
+
+/* Hide Hextra/default injected page titles above custom marketing pages. */
+body:has(.km-page) main > h1:first-child,
+body:has(.km-page) article > h1:first-child,
+body:has(.km-page) .content > h1:first-child,
+body:has(.km-page) main > div > h1:first-child,
+body:has(.km-page) main > div > div > h1:first-child,
+body:has(.km-page) main header > h1:first-child {
+  display: none !important;
+}
+
 .km-page {
-  max-width: 1120px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem) clamp(4rem, 7vw, 6rem);
+  padding: clamp(1.25rem, 2vw, 1.8rem) clamp(1rem, 3vw, 2rem) clamp(3.5rem, 6vw, 5rem);
 }
+
 .km-page-header {
-  padding: clamp(2.8rem, 6vw, 5.5rem) 0 clamp(2.2rem, 5vw, 4rem);
-  border-bottom: 1px solid var(--km-line);
-  margin-bottom: clamp(2.2rem, 5vw, 4rem);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(18, 70, 130, 0.14);
+  border-radius: 22px;
+  margin: clamp(1.2rem, 2.4vw, 1.9rem) auto clamp(2rem, 3.4vw, 2.8rem);
+  padding: clamp(1.7rem, 2.7vw, 2.3rem) clamp(1.35rem, 3vw, 2.35rem);
+  background:
+    linear-gradient(110deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.93) 55%, rgba(229,239,252,0.86) 100%);
+  box-shadow: 0 18px 42px rgba(8, 31, 62, 0.075);
 }
+
+.km-page-header::after {
+  content: "";
+  position: absolute;
+  right: clamp(1rem, 5vw, 3rem);
+  top: 50%;
+  width: clamp(110px, 14vw, 170px);
+  height: clamp(110px, 14vw, 170px);
+  transform: translateY(-50%);
+  background: url("/assets/keelmark-mark.svg") center / contain no-repeat;
+  opacity: .05;
+  pointer-events: none;
+}
+
 .km-page-header h1 {
-  max-width: 850px;
-  font-size: clamp(2.6rem, 5vw, 4.6rem);
+  max-width: 720px;
+  margin: 0;
+  color: var(--km-ink);
+  font-size: clamp(2rem, 3.2vw, 3.05rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
 }
+
 .km-page-header > p:last-child,
 .km-product-header p:last-child {
-  max-width: 720px;
-  font-size: 1.18rem;
-  margin-top: 1.2rem !important;
+  max-width: 760px;
+  margin-top: .95rem !important;
+  color: var(--km-ink-soft);
+  font-size: clamp(1rem, 1.25vw, 1.1rem);
+  line-height: 1.62;
 }
-.km-product-header {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  gap: 2rem;
-  align-items: center;
+
+.km-kicker {
+  margin-bottom: .75rem !important;
+  color: var(--km-blue) !important;
+  font-size: .74rem;
+  font-weight: 850;
+  letter-spacing: .22em;
+  text-transform: uppercase;
 }
-.km-product-header .km-product-icon { width: 140px; }
-.km-page-section { margin: 0 0 3.2rem; }
-.km-page-section h2 { margin-bottom: 1rem; }
-.km-page-section p + p { margin-top: 1rem; }
+
+.km-page-section {
+  margin: 0 0 clamp(1.9rem, 3vw, 2.5rem);
+}
+
+.km-page-section h2,
+.km-page h2 {
+  margin: 0 0 .75rem;
+  color: var(--km-ink);
+  font-size: clamp(1.5rem, 2.25vw, 2.05rem);
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+
+.km-page-section p,
+.km-page p {
+  color: var(--km-ink-soft);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.km-page-section p + p { margin-top: .9rem; }
+
 .km-card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
-  margin-top: 1.5rem;
+  gap: 1rem;
+  margin-top: 1.25rem;
 }
+
 .km-card {
   background: #fff;
-  border: 1px solid var(--km-line);
-  border-radius: 18px;
-  padding: 1.55rem;
-  box-shadow: var(--km-shadow-soft);
+  border: 1px solid rgba(18, 70, 130, 0.13);
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 24px rgba(8, 31, 62, 0.055);
 }
+
 .km-card h3 {
-  font-size: 1.15rem;
-  margin-bottom: .7rem;
+  color: var(--km-ink);
+  font-size: 1.04rem;
+  margin: 0 0 .55rem;
+  letter-spacing: -.02em;
 }
+
 .km-panel {
   background: linear-gradient(180deg, #f8fbff, #fff);
-  border: 1px solid var(--km-line);
-  border-radius: 22px;
-  padding: clamp(1.4rem, 3vw, 2.2rem);
-  box-shadow: var(--km-shadow-soft);
+  border: 1px solid rgba(18, 70, 130, 0.13);
+  border-radius: 18px;
+  padding: clamp(1.25rem, 2.4vw, 1.8rem);
+  box-shadow: 0 10px 24px rgba(8, 31, 62, 0.055);
 }
+
 .km-note {
-  padding: 1rem 1.1rem;
+  margin-top: 1rem !important;
+  padding: .9rem 1rem;
   border-radius: 12px;
   background: #f2f7ff;
   border: 1px solid #dbeafe;
   color: #244466 !important;
 }
-.km-product-showcase-page {
-  background: #fff;
-  border: 1px solid var(--km-line);
-  border-radius: 24px;
-  padding: clamp(1.4rem, 3vw, 2.2rem);
-  box-shadow: var(--km-shadow-soft);
+
+.km-product-header {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 1.25rem;
+  align-items: center;
 }
-.km-product-showcase-page .km-button { margin-top: 1.4rem; }
+.km-product-header .km-product-icon { width: 88px; border-radius: 18px; }
+
+.km-product-showcase-page {
+  margin-top: 0;
+  background: #fff;
+  border: 1px solid rgba(18, 70, 130, 0.13);
+  border-radius: 20px;
+  padding: clamp(1.35rem, 2.5vw, 2rem);
+  box-shadow: 0 12px 32px rgba(8, 31, 62, 0.075);
+}
+
+@media (max-width: 900px) {
+  .km-card-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .km-page {
+    padding-top: .9rem;
+  }
+  .km-page-header {
+    border-radius: 18px;
+    padding: 1.45rem 1.2rem;
+    margin-top: .9rem;
+  }
+  .km-page-header::after {
+    width: 110px;
+    height: 110px;
+    right: -1.4rem;
+    opacity: .035;
+  }
+  .km-page-header h1 {
+    font-size: clamp(1.85rem, 9vw, 2.4rem);
+  }
+  .km-card-grid { grid-template-columns: 1fr; }
+  .km-product-header { grid-template-columns: 1fr; }
+  .km-product-header .km-product-icon { width: 82px; }
+}
 
 /* Custom footer partial */
 .hextra-custom-footer { background: transparent !important; }
@@ -505,4 +636,186 @@ body:has(.km-landing) main [class*="hx-px-"] {
   .km-card-grid { grid-template-columns: 1fr; }
   .km-product-header { grid-template-columns: 1fr; }
   .km-footer-grid { grid-template-columns: 1fr; }
+}
+
+
+@media (max-width: 760px) {
+  .km-page {
+    padding-top: .75rem;
+  }
+  .km-page-header {
+    border-radius: 18px;
+  }
+  .km-page-header::after {
+    opacity: .035;
+    right: -2rem;
+  }
+  .km-product-header {
+    grid-template-columns: 1fr;
+  }
+  .km-product-header .km-product-icon {
+    width: 88px;
+  }
+}
+
+
+/* v7: lighter interior pages and mobile-nav repair.
+   Earlier versions hid .hextra-sidebar-container globally, which also killed
+   Hextra's mobile hamburger/drawer. Hide the docs sidebar only on desktop;
+   leave mobile behaviour to Hextra. */
+@media (min-width: 768px) {
+  body:has(.km-landing) .hextra-sidebar-container,
+  body:has(.km-page) .hextra-sidebar-container {
+    display: none !important;
+  }
+}
+
+body:has(.km-page) main,
+body:has(.km-page) article,
+body:has(.km-page) .content {
+  max-width: none !important;
+  padding-top: 0 !important;
+}
+
+.km-page {
+  max-width: 980px;
+  padding: clamp(.7rem, 1.4vw, 1.2rem) clamp(1rem, 3vw, 1.5rem) 4rem;
+}
+
+.km-page-header {
+  border: 0 !important;
+  border-bottom: 1px solid rgba(18, 70, 130, 0.14) !important;
+  border-radius: 0 !important;
+  margin: clamp(.75rem, 1.6vw, 1.25rem) 0 clamp(1.8rem, 3vw, 2.4rem) !important;
+  padding: clamp(1.05rem, 2vw, 1.45rem) 0 clamp(1.15rem, 2vw, 1.55rem) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.km-page-header::after {
+  display: none !important;
+}
+
+.km-page-header h1,
+.km-product-header h1 {
+  max-width: 760px;
+  font-size: clamp(1.85rem, 2.75vw, 2.55rem) !important;
+  line-height: 1.13 !important;
+  letter-spacing: -0.028em !important;
+  font-weight: 720 !important;
+}
+
+.km-page-header > p:last-child,
+.km-product-header p:last-child {
+  max-width: 760px;
+  margin-top: .75rem !important;
+  font-size: clamp(.98rem, 1.1vw, 1.05rem) !important;
+  line-height: 1.62 !important;
+}
+
+.km-kicker {
+  margin-bottom: .55rem !important;
+  font-size: .66rem !important;
+  letter-spacing: .20em !important;
+  font-weight: 780 !important;
+}
+
+.km-page-section {
+  margin-bottom: clamp(1.55rem, 2.6vw, 2.1rem) !important;
+}
+
+.km-page-section h2,
+.km-page h2 {
+  margin-bottom: .55rem !important;
+  font-size: clamp(1.35rem, 1.9vw, 1.72rem) !important;
+  line-height: 1.22 !important;
+  letter-spacing: -0.026em !important;
+  font-weight: 720 !important;
+}
+
+.km-page-section p,
+.km-page p {
+  font-size: .98rem !important;
+  line-height: 1.68 !important;
+}
+
+.km-card-grid {
+  gap: .85rem !important;
+  margin-top: 1rem !important;
+}
+
+.km-card,
+.km-panel,
+.km-product-showcase-page {
+  border: 1px solid rgba(18, 70, 130, 0.12) !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  background: #fff !important;
+  padding: 1rem !important;
+}
+
+.km-card h3 {
+  font-size: .96rem !important;
+  line-height: 1.25 !important;
+  font-weight: 720 !important;
+  margin-bottom: .35rem !important;
+}
+
+.km-panel h2 {
+  margin-top: 0 !important;
+}
+
+.km-product-showcase-page {
+  gap: 1.5rem !important;
+  align-items: center !important;
+}
+
+.km-product-showcase-page .km-product-icon,
+.km-product-header .km-product-icon {
+  width: 72px !important;
+  border-radius: 16px !important;
+}
+
+.km-product-header {
+  grid-template-columns: 78px 1fr !important;
+  gap: 1rem !important;
+}
+
+.km-product-list-wrap {
+  padding-left: 1.5rem !important;
+}
+
+.km-check-list {
+  gap: .55rem !important;
+}
+
+.km-button,
+.km-button-secondary {
+  min-height: 44px !important;
+  padding: .72rem 1.05rem !important;
+  border-radius: 7px !important;
+  font-size: .94rem !important;
+}
+
+.km-note {
+  border-radius: 9px !important;
+  padding: .75rem .85rem !important;
+}
+
+@media (max-width: 760px) {
+  .km-page {
+    padding-top: .55rem !important;
+  }
+  .km-page-header {
+    margin-top: .55rem !important;
+  }
+  .km-product-header {
+    grid-template-columns: 1fr !important;
+  }
+  .km-product-list-wrap {
+    border-left: 0 !important;
+    border-top: 1px solid var(--km-line) !important;
+    padding-left: 0 !important;
+    padding-top: 1rem !important;
+  }
 }

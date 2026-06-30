@@ -29,7 +29,7 @@ toc: false
     <p>If analytics or crash reporting are added, this policy should be updated to identify the service, the information collected, and how users can control it.</p>
   </section>
 
-  <section class="km-page-section">
+  <section class="km-page-section km-panel">
     <h2>Contact</h2>
     <p>For privacy questions, contact <a href="mailto:hello@keelmark.co.uk">hello@keelmark.co.uk</a>.</p>
     <p class="km-note">This is a starter policy. Check it against the final app behaviour and Google Play requirements before publishing.</p>
