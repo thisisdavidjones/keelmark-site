@@ -44,6 +44,112 @@
   
   <link rel="preload" as="image" href="/assets/hero-sailing-keelmark.jpg">
 <meta name="theme-color" content="#001f49">
+<script>
+(function () {
+  const KM_LINKS = [
+    ["Home", "/"],
+    ["Products", "/products/"],
+    ["About", "/about/"],
+    ["Privacy", "/privacy/"],
+    ["Contact", "/contact/"]
+  ];
+
+  function makePanel() {
+    let panel = document.getElementById("km-mobile-menu");
+    if (panel) return panel;
+
+    panel = document.createElement("nav");
+    panel.id = "km-mobile-menu";
+    panel.className = "km-mobile-menu-panel";
+    panel.setAttribute("aria-label", "Mobile navigation");
+    panel.setAttribute("data-open", "false");
+
+    KM_LINKS.forEach(function (link) {
+      const a = document.createElement("a");
+      a.textContent = link[0];
+      a.href = link[1];
+      a.addEventListener("click", function () {
+        panel.setAttribute("data-open", "false");
+        document.querySelectorAll("[aria-controls='km-mobile-menu']").forEach(function (btn) {
+          btn.setAttribute("aria-expanded", "false");
+        });
+      });
+      panel.appendChild(a);
+    });
+
+    document.body.appendChild(panel);
+    return panel;
+  }
+
+  function findOrCreateButton() {
+    const existing = Array.from(document.querySelectorAll(".hextra-hamburger-menu"))
+      .find(function (el) { return el.offsetParent !== null; }) ||
+      document.querySelector(".hextra-hamburger-menu");
+
+    if (existing) return existing;
+
+    const nav = document.querySelector(".hextra-nav-container") || document.querySelector("header") || document.body;
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "km-mobile-menu-button";
+    button.setAttribute("aria-label", "Open menu");
+    button.innerHTML = "☰";
+    nav.appendChild(button);
+    return button;
+  }
+
+  function closeOnOutsideClick(panel, button) {
+    document.addEventListener("click", function (event) {
+      if (panel.getAttribute("data-open") !== "true") return;
+      if (panel.contains(event.target) || button.contains(event.target)) return;
+      panel.setAttribute("data-open", "false");
+      button.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  function initKeelmarkMobileMenu() {
+    const panel = makePanel();
+    const button = findOrCreateButton();
+
+    button.classList.add("km-mobile-menu-trigger");
+    button.setAttribute("aria-controls", "km-mobile-menu");
+    button.setAttribute("aria-expanded", "false");
+    if (!button.getAttribute("aria-label")) button.setAttribute("aria-label", "Open menu");
+
+    button.addEventListener("click", function (event) {
+      if (window.innerWidth >= 768) return;
+      event.preventDefault();
+      event.stopPropagation();
+      if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+      const isOpen = panel.getAttribute("data-open") === "true";
+      panel.setAttribute("data-open", isOpen ? "false" : "true");
+      button.setAttribute("aria-expanded", isOpen ? "false" : "true");
+    }, true);
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        panel.setAttribute("data-open", "false");
+        button.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 768) {
+        panel.setAttribute("data-open", "false");
+        button.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    closeOnOutsideClick(panel, button);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initKeelmarkMobileMenu);
+  } else {
+    initKeelmarkMobileMenu();
+  }
+})();
+</script>
 </head>
 <body>
     <a href="#content" class="hx:sr-only hx:focus-visible:not-sr-only hx:focus-visible:fixed hx:focus-visible:z-50 hx:focus-visible:top-2 hx:focus-visible:left-2 hx:focus-visible:bg-primary-500 hx:focus-visible:text-white hx:focus-visible:px-4 hx:focus-visible:py-2 hx:focus-visible:rounded-md hx:focus-visible:text-sm hx:focus-visible:font-medium">Skip to content</a><div class="hextra-nav-container hx:sticky hx:top-0 hx:z-20 hx:w-full hx:bg-transparent hx:print:hidden">
