@@ -274,7 +274,21 @@ body:has(.km-page) .content {
   transform: translateY(-1px);
   box-shadow: 0 16px 36px rgba(7,26,51,.15);
 }
-.km-button-icon { font-size: 1.05rem; line-height: 1; }
+.km-button-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.km-button-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
 
 /* Principle strip */
 .km-principles {
@@ -1041,4 +1055,24 @@ body:has(.km-page) .km-product-showcase-page .km-product-icon {
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
   }
+}
+
+
+/* v10: replace text-symbol button icons with proper SVG treatment.
+   Unicode symbols like ⓘ can rasterise unevenly at small sizes, because fonts are a landfill with kerning. */
+.km-button-icon {
+  width: 1.15rem !important;
+  height: 1.15rem !important;
+  flex: 0 0 1.15rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  font-size: 0 !important;
+}
+.km-button-icon svg {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  overflow: visible !important;
 }
